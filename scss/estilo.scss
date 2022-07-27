@@ -1,0 +1,346 @@
+@import "variables","condicionales","bucles","maps";
+
+
+* {
+
+    margin: 0px;
+
+    padding: 0px;
+
+}
+
+/* index */
+.home {
+    border-color: red;
+    background-color: rgb(54, 152, 110);
+    font-size: 40px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 90%;
+    margin: auto;
+
+}
+
+.logo-menu {
+    width: 100px;
+    height: 100px;
+}
+
+ul {
+    color: rgb(38, 40, 116)
+}
+
+
+.boton-comprar {
+    width: 100%;
+}
+
+h3 {
+
+    font-size: 50px;
+    font-style: italic;
+
+}
+
+h1 {
+    font-style: italic;
+    color: rgb(0, 0, 0);
+    font-family: fantasy;
+    text-align: center;
+}
+
+body {
+    background-image: url('../img/fondo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.boxmodeldiv {
+    background-color: aquamarine;
+    width: 200px;
+    height: 200;
+    overflow: auto;
+}
+
+/* nosotros */
+
+.contacto {
+    font-style: italic;
+    margin-left: 100px;
+    margin-bottom: 200;
+    margin-right: 100;
+}
+
+.nosotros {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* productos */
+.piscina {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hogar {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.padre {
+    background-color: white;
+}
+
+.hijo {
+    background-color: gainsboro;
+    border: solid 1px rgb(3, 3, 3);
+}
+
+#productos div,
+#servicios div {
+    border: solid 1px;
+    padding: 5px;
+    background-color: bisque;
+}
+
+.border {
+    border: 1px solid black;
+}
+
+
+/* GRIDS */
+
+.grid-container {
+    display: grid;
+    background-color: aliceblue;
+
+
+}
+
+.grid-container div {
+    background-color: lightblue;
+}
+
+.padre-nosotros {
+    display: grid;
+
+    grid-template-rows: repeat(2, 2fr);
+}
+
+
+.hijo-nosotros {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin: 10px;
+    padding: 10px;
+}
+
+
+.fotos-productos img {
+    width: 200px;
+    height: 200px;
+}
+
+.mapouter {
+    display: block;
+    margin: 0 auto;
+}
+
+
+@media screen and (min-width: 320px) {
+    .padre-nosotros {
+        display: flex;
+        background-color: wheat;
+        padding: 10px;
+        border: 2px solid black;
+        flex-basis: 100%;
+
+
+    }
+
+    .hijo-nosotros {
+        display: flex;
+        flex-basis: 100%;
+
+        margin: 10px;
+        padding: 10px;
+    }
+
+}
+
+
+/*animacion*/
+
+.burbuja {
+    border-radius: 50%;
+    background: lightblue;
+    opacity: .3;
+
+    position: absolute;
+
+
+    animation: burbujas 2s linear infinite;
+}
+
+.burbuja:nth-child(1) {
+    width: 80px;
+    height: 80px;
+    left: 5%;
+    animation-duration: 3s;
+    animation-delay: 3s;
+}
+
+.burbuja:nth-child(2) {
+    width: 100px;
+    height: 100px;
+    left: 35%;
+    animation-duration: 3s;
+    animation-delay: 5s;
+}
+
+.burbuja:nth-child(3) {
+    width: 20px;
+    height: 20px;
+    left: 15%;
+    animation-duration: 1.5s;
+    animation-delay: 5s;
+}
+
+.burbuja:nth-child(4) {
+    width: 50px;
+    height: 50px;
+    left: 90%;
+    animation-duration: 6s;
+    animation-delay: 3s;
+}
+
+.burbuja:nth-child(5) {
+    width: 70px;
+    height: 70px;
+    left: 65%;
+    animation-duration: 3s;
+    animation-delay: 1s;
+}
+
+.burbuja:nth-child(6) {
+    width: 20px;
+    height: 20px;
+    left: 50%;
+    animation-duration: 4s;
+    animation-delay: 5s;
+}
+
+.burbuja:nth-child(7) {
+    width: 20px;
+    height: 20px;
+    left: 50%;
+    animation-duration: 4s;
+    animation-delay: 5s;
+}
+
+.burbuja:nth-child(8) {
+    width: 100;
+    height: 100px;
+    left: 52%;
+    animation-duration: 3s;
+    animation-delay: 3s;
+}
+
+.burbuja:nth-child(9) {
+    width: 65px;
+    height: 65px;
+    left: 51%;
+    animation-duration: 2s;
+    animation-delay: 2s;
+}
+
+.burbuja:nth-child(10) {
+    width: 40px;
+    height: 40px;
+    left: 35%;
+    animation-duration: 1s;
+    animation-delay: 2s;
+}
+
+
+@keyframes burbujas {
+    0% {
+        bottom: 0;
+        opacity: 0;
+    }
+
+    30% {
+        transform: translateX(30px);
+    }
+
+    50% {
+        opacity: .4;
+    }
+
+    100% {
+        bottom: 100vh;
+        opacity: 0;
+    }
+}
+
+@keyframes movimiento {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(30px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .padre-nosotros {
+        display: grid;
+        grid-template-columns: 2fr 3fr 1fr;
+        grid-template-columns: repeat(2, 2fr);
+        grid-template-rows: repeat(2, 2fr);
+    }
+
+    .hijo-nosotros {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        margin: 10px;
+        padding: 10px;
+    }
+
+}
+
+
+.bi-facebook {
+
+    text-align: center;
+    margin-left: 1px;
+    margin-right: 1px;
+    color: blue
+}
+
+
+.bi-whatsapp {
+    text-align: center;
+    margin-left: 1px;
+    margin-right: 1px;
+    color: rgb(20, 119, 25);
+}
+
+.bi-whatsapp:hover {
+    color: #25D366;
+}
+
+.bi-instagram {
+
+    text-align: center;
+    margin-left: 1px;
+    margin-right: 1px;
+    color: rgb(160, 88, 41);
+}

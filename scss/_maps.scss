@@ -1,0 +1,8 @@
+$mapredes: (facebook:blue,instagram:red,whatsapp:green,);
+
+@each $red, $color in $mapredes {
+    .#{$red} {
+        color: $color;
+    }
+
+}

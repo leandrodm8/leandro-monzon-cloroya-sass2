@@ -1,0 +1,12 @@
+$vista: escritorio;
+
+@if ($vista == escritorio) {
+body {  
+    background-color: gray;
+}
+}
+@else {
+    body {
+        background-color: indigo;
+    }
+}
